@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KA | IT Professional, Data & Networking Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            card: '#1e293b',
+                            accent: '#06b6d4',
+                            glow: '#0ea5e9',
+                            light: '#f8fafc',
+                            muted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.25);
+        }
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-none {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-accent selection:text-brand-dark">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Brand -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-accent to-blue-600 flex items-center justify-center text-slate-900 font-black text-xl shadow-lg shadow-brand-accent/20 group-hover:scale-105 transition-transform">
+                        KA
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg leading-none text-slate-100 group-hover:text-brand-accent transition-colors">KA</span>
+                        <span class="text-xs text-brand-muted tracking-wide mt-1">IT & Data Specialist</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                    <a href="#about" class="text-slate-300 hover:text-brand-accent transition-colors">About</a>
+                    <a href="#goals" class="text-slate-300 hover:text-brand-accent transition-colors">Goals</a>
+                    <a href="#projects" class="text-slate-300 hover:text-brand-accent transition-colors">Projects</a>
+                    <a href="#expertise" class="text-slate-300 hover:text-brand-accent transition-colors">Expertise</a>
+                    <a href="#tools" class="text-slate-300 hover:text-brand-accent transition-colors">Toolkit</a>
+                    <a href="#contact" class="px-4 py-2 rounded-lg bg-brand-accent/10 border border-brand-accent/30 text-brand-accent hover:bg-brand-accent hover:text-slate-900 font-semibold transition-all shadow-sm hover:shadow-brand-accent/20">Contact Me</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-colors" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block px-3 py-2 rounded-md text-slate-300 hover:bg-slate-800 hover:text-brand-accent">About</a>
+            <a href="#goals" class="block px-3 py-2 rounded-md text-slate-300 hover:bg-slate-800 hover:text-brand-accent">Goals</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-slate-300 hover:bg-slate-800 hover:text-brand-accent">Projects</a>
+            <a href="#expertise" class="block px-3 py-2 rounded-md text-slate-300 hover:bg-slate-800 hover:text-brand-accent">Expertise</a>
+            <a href="#tools" class="block px-3 py-2 rounded-md text-slate-300 hover:bg-slate-800 hover:text-brand-accent">Toolkit</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md bg-brand-accent text-slate-900 font-bold text-center mt-2">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[90vh] flex items-center relative overflow-hidden py-16">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-10 right-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-accent/10 border border-brand-accent/20 text-brand-accent text-xs font-semibold mb-6">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                        IT Professional · Networking · Data Analysis · AI Generalist
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-100 tracking-tight leading-tight mb-6">
+                        Building Thoughtful <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-blue-400">Digital Solutions.</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-slate-400 leading-relaxed mb-8">
+                        I bring together IT support, computer networking, data analysis, and emerging AI tools to solve practical problems and create reliable digital experiences from Kenya.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="#projects" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-accent to-blue-500 text-slate-900 font-bold shadow-lg shadow-brand-accent/25 hover:shadow-brand-accent/40 hover:-translate-y-0.5 transition-all flex items-center gap-2">
+                            Explore My Work <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#about" class="px-6 py-3.5 rounded-xl glass hover:bg-slate-800 text-slate-200 font-semibold border border-slate-700/60 hover:border-slate-500 transition-all">
+                            Get to Know Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-slate-900/50 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-5">
+                        <div class="relative">
+                            <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-accent to-blue-600 opacity-30 blur-lg"></div>
+                            <div class="relative glass rounded-2xl p-8 border border-slate-700/80">
+                                <div class="w-20 h-20 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-accent text-3xl mb-6 shadow-inner">
+                                    <i class="fa-solid fa-user-gear"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-slate-100 mb-2">KA</h3>
+                                <p class="text-brand-accent text-sm font-medium mb-4">Computer Science Professional</p>
+                                <div class="space-y-3 text-sm text-slate-400 border-t border-slate-800 pt-4">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-location-dot text-brand-accent w-4"></i>
+                                        <span>Kenya 🇰🇪</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-graduation-cap text-brand-accent w-4"></i>
+                                        <span>Computer Science Background</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-lightbulb text-brand-accent w-4"></i>
+                                        <span>Systems & Data Enthusiast</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-7 space-y-6">
+                        <div class="inline-block px-3 py-1 rounded-md bg-slate-800 text-brand-accent text-xs font-bold uppercase tracking-wider">
+                            About Me
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-slate-100">Connecting Systems, Data & Innovation</h2>
+                        
+                        <p class="text-slate-300 leading-relaxed">
+                            I am a technology-driven Computer Science professional passionate about IT systems support, computer networking, data analysis, and Artificial Intelligence. I enjoy understanding how systems work, troubleshooting technical challenges, and transforming information into meaningful insights.
+                        </p>
+                        
+                        <p class="text-slate-300 leading-relaxed">
+                            Through hands-on practice, professional experience, and continuous learning, I am developing the skills to connect reliable IT infrastructure with data-driven decision-making and emerging digital technologies.
+                        </p>
+
+                        <div class="p-4 rounded-xl glass border-l-4 border-l-brand-accent bg-slate-800/40">
+                            <p class="text-sm text-slate-300 italic">
+                                "My ambition is to become a versatile technology professional who develops practical solutions, improves operational efficiency, and contributes meaningfully to digital transformation."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Goals Section -->
+        <section id="goals" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="inline-block px-3 py-1 rounded-md bg-slate-800 text-brand-accent text-xs font-bold uppercase tracking-wider mb-3">
+                        Professional Goals
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-100">My Vision & Priorities</h2>
+                    <p class="text-slate-400 mt-3">Continuously advancing expertise to build innovative solutions that improve efficiency and support informed decision-making.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass p-6 rounded-2xl border border-slate-800 hover:border-brand-accent/50 transition-all glow-effect group">
+                        <div class="w-12 h-12 rounded-xl bg-slate-800 text-brand-accent flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2">IT Infrastructure</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Strengthen skills in system installation, configuration, maintenance, and end-to-end troubleshooting.
+                        </p>
+                    </div>
+
+                    <div class="glass p-6 rounded-2xl border border-slate-800 hover:border-brand-accent/50 transition-all glow-effect group">
+                        <div class="w-12 h-12 rounded-xl bg-slate-800 text-brand-accent flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2">Computer Networking</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Develop deeper knowledge of network configuration, IP connectivity, and infrastructure management.
+                        </p>
+                    </div>
+
+                    <div class="glass p-6 rounded-2xl border border-slate-800 hover:border-brand-accent/50 transition-all glow-effect group">
+                        <div class="w-12 h-12 rounded-xl bg-slate-800 text-brand-accent flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2">Data Analysis</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Improve proficiency in SQL, Microsoft Excel, Power BI, Power Query, and interactive data visualization.
+                        </p>
+                    </div>
+
+                    <div class="glass p-6 rounded-2xl border border-slate-800 hover:border-brand-accent/50 transition-all glow-effect group">
+                        <div class="w-12 h-12 rounded-xl bg-slate-800 text-brand-accent flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2">Artificial Intelligence</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Explore practical AI productivity tools and modern workflows to enhance efficiency and solve challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects & Work Section (With Multi-Image Gallery & Upload) -->
+        <section id="projects" class="py-20 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-md bg-slate-800 text-brand-accent text-xs font-bold uppercase tracking-wider mb-3">
+                            Projects & Practical Work
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-slate-100">Featured Technical Work</h2>
+                        <p class="text-slate-400 text-sm mt-2">🖼️ Click <strong class="text-brand-accent">+ Add Image</strong> on any project to add multiple real screenshots!</p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="project-filters">
+                        <button class="filter-btn active px-4 py-2 rounded-lg text-sm font-medium bg-brand-accent text-slate-900 transition-all" data-filter="all">All</button>
+                        <button class="filter-btn px-4 py-2 rounded-lg text-sm font-medium glass hover:bg-slate-800 text-slate-300 transition-all" data-filter="data">Data Analysis</button>
+                        <button class="filter-btn px-4 py-2 rounded-lg text-sm font-medium glass hover:bg-slate-800 text-slate-300 transition-all" data-filter="web">Web Dev</button>
+                        <button class="filter-btn px-4 py-2 rounded-lg text-sm font-medium glass hover:bg-slate-800 text-slate-300 transition-all" data-filter="networking">Networking & IT</button>
+                    </div>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-card glass rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-700 transition-all glow-effect flex flex-col" data-category="data">
+                        <!-- Multi-Image Carousel Header -->
+                        <div class="h-56 bg-slate-800/80 relative overflow-hidden group border-b border-slate-800 flex items-center justify-center">
+                            <img id="img-project1" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Apocalypse Sales Dashboard Preview" class="w-full h-full object-cover transition-all duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60"></div>
+                            
+                            <!-- Category Badge -->
+                            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-brand-accent/90 text-slate-900 z-10 shadow">
+                                Data Analysis
+                            </span>
+
+                            <!-- Add Image Button -->
+                            <label class="absolute top-3 right-3 cursor-pointer bg-slate-900/90 hover:bg-brand-accent hover:text-slate-900 text-brand-accent border border-brand-accent/40 rounded-xl px-3 py-1.5 text-xs font-bold shadow-lg transition-all flex items-center gap-1.5 z-20">
+                                <i class="fa-solid fa-plus text-xs"></i> Add Image
+                                <input type="file" accept="image/*" multiple class="hidden" onchange="addMultipleImages(event, 'project1')">
+                            </label>
+
+                            <!-- Carousel Controls (Left/Right Arrows) -->
+                            <button onclick="navigateGallery('project1', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/70 hover:bg-brand-accent hover:text-slate-900 text-slate-200 flex items-center justify-center transition-colors z-10 shadow">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="navigateGallery('project1', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/70 hover:bg-brand-accent hover:text-slate-900 text-slate-200 flex items-center justify-center transition-colors z-10 shadow">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+
+                            <!-- Image Count Indicator -->
+                            <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-slate-900/80 border border-slate-700 text-xs font-medium text-slate-300 z-10">
+                                <span id="count-project1">1 / 1</span>
+                            </div>
+                        </div>
+
+                        <!-- Thumbnail Bar -->
+                        <div id="thumbs-project1" class="flex gap-2 p-2 bg-slate-900/80 border-b border-slate-800 overflow-x-auto scrollbar-none">
+                            <img onclick="selectGalleryImage('project1', 0)" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" class="w-12 h-10 object-cover rounded border-2 border-brand-accent cursor-pointer">
+                        </div>
+
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100 mb-2">Apocalypse Sales Dashboard</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    An interactive Power BI dashboard designed to analyse sales performance and uncover meaningful business insights. The project involves cleaning and transforming raw data, resolving inconsistencies, handling missing values, and visualising key performance metrics to support data-driven decision-making.
+                                </p>
+                            </div>
+
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Power BI</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Power Query</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Data Cleansing</span>
+                                </div>
+                                <button onclick="openModal('project1')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-brand-accent text-sm font-semibold transition-colors flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-circle-info"></i> View Details & Full Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-700 transition-all glow-effect flex flex-col" data-category="web">
+                        <div class="h-56 bg-slate-800/80 relative overflow-hidden group border-b border-slate-800 flex items-center justify-center">
+                            <img id="img-project2" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80" alt="ICT Maintenance Request System Preview" class="w-full h-full object-cover transition-all duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60"></div>
+                            
+                            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/90 text-slate-900 z-10 shadow">
+                                Web Development
+                            </span>
+
+                            <label class="absolute top-3 right-3 cursor-pointer bg-slate-900/90 hover:bg-brand-accent hover:text-slate-900 text-brand-accent border border-brand-accent/40 rounded-xl px-3 py-1.5 text-xs font-bold shadow-lg transition-all flex items-center gap-1.5 z-20">
+                                <i class="fa-solid fa-plus text-xs"></i> Add Image
+                                <input type="file" accept="image/*" multiple class="hidden" onchange="addMultipleImages(event, 'project2')">
+                            </label>
+
+                            <button onclick="navigateGallery('project2', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/70 hover:bg-brand-accent hover:text-slate-900 text-slate-200 flex items-center justify-center transition-colors z-10 shadow">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="navigateGallery('project2', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/70 hover:bg-brand-accent hover:text-slate-900 text-slate-200 flex items-center justify-center transition-colors z-10 shadow">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+
+                            <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-slate-900/80 border border-slate-700 text-xs font-medium text-slate-300 z-10">
+                                <span id="count-project2">1 / 1</span>
+                            </div>
+                        </div>
+
+                        <div id="thumbs-project2" class="flex gap-2 p-2 bg-slate-900/80 border-b border-slate-800 overflow-x-auto scrollbar-none">
+                            <img onclick="selectGalleryImage('project2', 0)" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80" class="w-12 h-10 object-cover rounded border-2 border-brand-accent cursor-pointer">
+                        </div>
+
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100 mb-2">ICT Maintenance Request System</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    A web-based system designed to streamline ICT maintenance requests by allowing users to report equipment issues and enabling administrators to review and track requests through different stages of resolution.
+                                </p>
+                            </div>
+
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">PHP</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">MySQL</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">HTML/CSS</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">XAMPP</span>
+                                </div>
+                                <button onclick="openModal('project2')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-brand-accent text-sm font-semibold transition-colors flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-circle-info"></i> View Details & Full Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-700 transition-all glow-effect flex flex-col" data-category="networking">
+                        <div class="h-56 bg-slate-800/80 relative overflow-hidden group border-b border-slate-800 flex items-center justify-center">
+                            <img id="img-project3" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Networking Practice Preview" class="w-full h-full object-cover transition-all duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60"></div>
+                            
+                            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-teal-500/90 text-slate-900 z-10 shadow">
+                                Networking & IT Support
+                            </span>
+
+                            <label class="absolute top-3 right-3 cursor-pointer bg-slate-900/90 hover:bg-brand-accent hover:text-slate-900 text-brand-accent border border-brand-accent/40 rounded-xl px-3 py-1.5 text-xs font-bold shadow-lg transition-all flex items-center gap-1.5 z-20">
+                                <i class="fa-solid fa-plus text-xs"></i> Add Image
+                                <input type="file" accept="image/*" multiple class="hidden" onchange="addMultipleImages(event, 'project3')">
+                            </label>
+
+                            <button onclick="navigateGallery('project3', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/70 hover:bg-brand-accent hover:text-slate-900 text-slate-200 flex items-center justify-center transition-colors z-10 shadow">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="navigateGallery('project3', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/70 hover:bg-brand-accent hover:text-slate-900 text-slate-200 flex items-center justify-center transition-colors z-10 shadow">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+
+                            <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-slate-900/80 border border-slate-700 text-xs font-medium text-slate-300 z-10">
+                                <span id="count-project3">1 / 1</span>
+                            </div>
+                        </div>
+
+                        <div id="thumbs-project3" class="flex gap-2 p-2 bg-slate-900/80 border-b border-slate-800 overflow-x-auto scrollbar-none">
+                            <img onclick="selectGalleryImage('project3', 0)" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" class="w-12 h-10 object-cover rounded border-2 border-brand-accent cursor-pointer">
+                        </div>
+
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100 mb-2">Computer Networking & IT Support Practice</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    Practical experience in maintaining computer systems, troubleshooting network connectivity, configuring access points, terminating network cables, installing operating systems, and diagnosing common hardware and software faults.
+                                </p>
+                            </div>
+
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Network Troubleshooting</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">IP Connectivity</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">Access Points</span>
+                                </div>
+                                <button onclick="openModal('project3')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-brand-accent text-sm font-semibold transition-colors flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-circle-info"></i> View Details & Full Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card glass rounded-2xl overflow-hidden border border-slate-800 hover:border-slate-700 transition-all glow-effect flex flex-col" data-category="web">
+                        <div class="h-56 bg-slate-800/80 relative overflow-hidden group border-b border-slate-800 flex items-center justify-center">
+                            <img id="img-project4" src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Personal Portfolio Website Preview" class="w-full h-full object-cover transition-all duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60"></div>
+                            
+                            <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/90 text-slate-900 z-10 shadow">
+                                Web Development
+                            </span>
+
+                            <label class="absolute top-3 right-3 cursor-pointer bg-slate-900/90 hover:bg-brand-accent hover:text-slate-900 text-brand-accent border border-brand-accent/40 rounded-xl px-3 py-1.5 text-xs font-bold shadow-lg transition-all flex items-center gap-1.5 z-20">
+                                <i class="fa-solid fa-plus text-xs"></i> Add Image
+                                <input type="file" accept="image/*" multiple class="hidden" onchange="addMultipleImages(event, 'project4')">
+                            </label>
+
+                            <button onclick="navigateGallery('project4', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/70 hover:bg-brand-accent hover:text-slate-900 text-slate-200 flex items-center justify-center transition-colors z-10 shadow">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="navigateGallery('project4', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/70 hover:bg-brand-accent hover:text-slate-900 text-slate-200 flex items-center justify-center transition-colors z-10 shadow">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+
+                            <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-slate-900/80 border border-slate-700 text-xs font-medium text-slate-300 z-10">
+                                <span id="count-project4">1 / 1</span>
+                            </div>
+                        </div>
+
+                        <div id="thumbs-project4" class="flex gap-2 p-2 bg-slate-900/80 border-b border-slate-800 overflow-x-auto scrollbar-none">
+                            <img onclick="selectGalleryImage('project4', 0)" src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" class="w-12 h-10 object-cover rounded border-2 border-brand-accent cursor-pointer">
+                        </div>
+
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100 mb-2">Personal Portfolio Website</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    A personal portfolio website designed to showcase technical interests, projects, professional goals, and developing expertise. Features clean, responsive aesthetics and interactive UI elements.
+                                </p>
+                            </div>
+
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">HTML5</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">CSS3 / Tailwind</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700">JavaScript</span>
+                                </div>
+                                <button onclick="openModal('project4')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-brand-accent text-sm font-semibold transition-colors flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-circle-info"></i> View Details & Full Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Areas of Expertise Section -->
+        <section id="expertise" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="inline-block px-3 py-1 rounded-md bg-slate-800 text-brand-accent text-xs font-bold uppercase tracking-wider mb-3">
+                        Capabilities
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-100">Areas of Expertise</h2>
+                    <p class="text-slate-400 mt-3">Core competencies across system infrastructure, networks, analytics, and digital innovation.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Area 1 -->
+                    <div class="glass p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-accent/10 border border-brand-accent/20 text-brand-accent flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100">IT Support & Systems Maintenance</h3>
+                                <p class="text-xs text-brand-muted">Reliable & Efficient IT Operations</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Operating system installation, configuration, and optimization.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Hardware and software troubleshooting and diagnostic testing.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Computer preventative maintenance and system performance tuning.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Technical fault diagnosis and timely resolution.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Area 2 -->
+                    <div class="glass p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-accent/10 border border-brand-accent/20 text-brand-accent flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100">Computer Networking</h3>
+                                <p class="text-xs text-brand-muted">Infrastructure & Connectivity</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Network configuration, subnetting, and IP addressing schemes.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>LAN connectivity implementation and network troubleshooting.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Router, switch, and access point setup and maintenance.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Ethernet cable termination, testing, and physical network fault isolation.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Area 3 -->
+                    <div class="glass p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-accent/10 border border-brand-accent/20 text-brand-accent flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100">Data Analysis</h3>
+                                <p class="text-xs text-brand-muted">Insights & Visualizations</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Data cleaning, transformation, and structuring using Microsoft Excel & Power Query.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Writing SQL queries for data extraction and database analysis.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Designing interactive Power BI dashboards and visual reports.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Excel-based statistical analysis and performance summary reporting.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Area 4 -->
+                    <div class="glass p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-brand-accent/10 border border-brand-accent/20 text-brand-accent flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-100">AI & Digital Innovation</h3>
+                                <p class="text-xs text-brand-muted">Productivity & Automation</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Leveraging modern AI tools for accelerated research and productivity.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Applying AI-assisted methodologies for rapid technical problem-solving.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Workflow improvement concepts and operational automation ideas.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-brand-accent mt-1"></i>
+                                <span>Exploring practical business applications of modern AI models.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Technologies Matrix Section -->
+        <section id="tools" class="py-20 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <div class="inline-block px-3 py-1 rounded-md bg-slate-800 text-brand-accent text-xs font-bold uppercase tracking-wider mb-3">
+                        Technical Stack
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-100">Tools & Technologies</h2>
+                    <p class="text-slate-400 mt-3">My current learning and practical toolkit, continuously expanding through hands-on project development.</p>
+                </div>
+
+                <div class="glass rounded-2xl border border-slate-800 overflow-hidden shadow-xl">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm text-slate-300">
+                            <thead class="bg-slate-800/80 text-brand-accent uppercase text-xs tracking-wider border-b border-slate-700">
+                                <tr>
+                                    <th scope="col" class="px-6 py-4 font-bold">Category</th>
+                                    <th scope="col" class="px-6 py-4 font-bold">Tools & Technologies</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800">
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-slate-100 flex items-center gap-2">
+                                        <i class="fa-solid fa-chart-column text-brand-accent"></i> Data Analysis
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">Microsoft Excel</span>
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">Power BI</span>
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">Power Query</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-slate-100 flex items-center gap-2">
+                                        <i class="fa-solid fa-database text-brand-accent"></i> Databases
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">SQL</span>
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">MySQL</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-slate-100 flex items-center gap-2">
+                                        <i class="fa-solid fa-code text-brand-accent"></i> Web Development
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">PHP</span>
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">HTML5</span>
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">CSS3</span>
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">JavaScript</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-slate-100 flex items-center gap-2">
+                                        <i class="fa-brands fa-windows text-brand-accent"></i> Operating Systems
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">Windows Installation & Configuration</span>
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">Windows Server Practice</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-slate-100 flex items-center gap-2">
+                                        <i class="fa-solid fa-ethernet text-brand-accent"></i> Networking
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">IP Connectivity</span>
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">Access Points</span>
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">LAN Troubleshooting</span>
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">Cable Termination</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4 font-semibold text-slate-100 flex items-center gap-2">
+                                        <i class="fa-solid fa-brain text-brand-accent"></i> AI Tools
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">AI Productivity Assistants</span>
+                                            <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-200 text-xs border border-slate-700">Emerging AI Applications</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Professional Strengths Badges -->
+                <div class="mt-16">
+                    <h3 class="text-xl font-bold text-slate-100 text-center mb-8">Professional Strengths</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+                        <div class="glass p-4 rounded-xl border border-slate-800">
+                            <i class="fa-solid fa-compass text-brand-accent text-2xl mb-2"></i>
+                            <p class="text-xs font-semibold text-slate-200">Technical Curiosity</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl border border-slate-800">
+                            <i class="fa-solid fa-brain text-brand-accent text-2xl mb-2"></i>
+                            <p class="text-xs font-semibold text-slate-200">Analytical Thinking</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl border border-slate-800">
+                            <i class="fa-solid fa-wrench text-brand-accent text-2xl mb-2"></i>
+                            <p class="text-xs font-semibold text-slate-200">Practical Problem-Solving</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl border border-slate-800">
+                            <i class="fa-solid fa-arrows-rotate text-brand-accent text-2xl mb-2"></i>
+                            <p class="text-xs font-semibold text-slate-200">Adaptability</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl border border-slate-800 col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-seedling text-brand-accent text-2xl mb-2"></i>
+                            <p class="text-xs font-semibold text-slate-200">Continuous Development</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12">
+                    
+                    <!-- Contact Info -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="inline-block px-3 py-1 rounded-md bg-slate-800 text-brand-accent text-xs font-bold uppercase tracking-wider">
+                            Get In Touch
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-slate-100">Let’s Make Something Meaningful.</h2>
+                        <p class="text-slate-400 leading-relaxed">
+                            I welcome opportunities to learn, collaborate, and contribute to practical technology projects. I am particularly interested in roles involving IT support, computer networking, data analysis, and emerging technologies.
+                        </p>
+
+                        <div class="space-y-4 pt-4">
+                            <div class="glass p-4 rounded-xl flex items-center gap-4 border border-slate-800">
+                                <div class="w-10 h-10 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center text-lg">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-brand-muted">Location</p>
+                                    <p class="text-sm font-semibold text-slate-200">Kenya 🇰🇪</p>
+                                </div>
+                            </div>
+
+                            <div class="glass p-4 rounded-xl flex items-center justify-between border border-slate-800 group">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center text-lg">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-brand-muted">Email</p>
+                                        <p id="email-text" class="text-sm font-semibold text-slate-200">your.email@example.com</p>
+                                    </div>
+                                </div>
+                                <button onclick="copyToClipboard('your.email@example.com', 'email-btn')" id="email-btn" class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-medium text-brand-accent hover:bg-brand-accent hover:text-slate-900 transition-colors">
+                                    Copy
+                                </button>
+                            </div>
+
+                            <div class="glass p-4 rounded-xl flex items-center justify-between border border-slate-800">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center text-lg">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-brand-muted">LinkedIn</p>
+                                        <p class="text-sm font-semibold text-slate-200">LinkedIn Profile</p>
+                                    </div>
+                                </div>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-medium text-brand-accent hover:bg-brand-accent hover:text-slate-900 transition-colors">
+                                    Visit <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                                </a>
+                            </div>
+
+                            <div class="glass p-4 rounded-xl flex items-center justify-between border border-slate-800">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-lg bg-brand-accent/10 text-brand-accent flex items-center justify-center text-lg">
+                                        <i class="fa-brands fa-github"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-brand-muted">GitHub / Portfolio</p>
+                                        <p class="text-sm font-semibold text-slate-200">GitHub Repositories</p>
+                                    </div>
+                                </div>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-800 text-xs font-medium text-brand-accent hover:bg-brand-accent hover:text-slate-900 transition-colors">
+                                    Visit <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form Simulation -->
+                    <div class="lg:col-span-7">
+                        <div class="glass p-8 rounded-2xl border border-slate-800">
+                            <h3 class="text-xl font-bold text-slate-100 mb-6">Send a Message</h3>
+                            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-400 mb-2">Your Name</label>
+                                        <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-brand-accent transition-colors">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-400 mb-2">Your Email</label>
+                                        <input type="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-brand-accent transition-colors">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-400 mb-2">Subject</label>
+                                    <input type="text" required placeholder="Opportunity / Collaboration" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-brand-accent transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-400 mb-2">Message</label>
+                                    <textarea rows="4" required placeholder="Hi KA, I'd like to discuss..." class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-brand-accent transition-colors"></textarea>
+                                </div>
+                                <button type="submit" id="submit-btn" class="w-full py-3.5 rounded-xl bg-brand-accent text-slate-900 font-bold hover:bg-brand-glow transition-colors flex items-center justify-center gap-2">
+                                    <span>Send Message</span>
+                                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                                </button>
+                            </form>
+                            <div id="form-feedback" class="hidden mt-4 p-3 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs text-center font-medium">
+                                Thank you! Your message simulation has been sent.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Branding -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-brand-accent flex items-center justify-center text-slate-900 font-black text-sm">
+                        KA
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-slate-200">KA Portfolio</p>
+                        <p class="text-xs text-slate-400">Building clean digital experiences from Kenya.</p>
+                    </div>
+                </div>
+
+                <div class="text-xs text-slate-400 text-center md:text-right">
+                    <p>IT Support · Networking · Data Analysis · AI</p>
+                    <p class="mt-1">© 2026 KA. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+        <div class="glass border border-slate-700 rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-slate-100 flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Modal Content Injected by JS -->
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Copy to Clipboard
+        function copyToClipboard(text, btnId) {
+            navigator.clipboard.writeText(text);
+            const btn = document.getElementById(btnId);
+            const originalText = btn.innerText;
+            btn.innerText = 'Copied!';
+            btn.classList.add('bg-brand-accent', 'text-slate-900');
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.remove('bg-brand-accent', 'text-slate-900');
+            }, 2000);
+        }
+
+        // Form Submit Simulation
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            const feedback = document.getElementById('form-feedback');
+            
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Sending...`;
+
+            setTimeout(() => {
+                btn.innerHTML = `<span>Message Sent!</span> <i class="fa-solid fa-check"></i>`;
+                feedback.classList.remove('hidden');
+                e.target.reset();
+
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.innerHTML = `<span>Send Message</span> <i class="fa-solid fa-paper-plane text-xs"></i>`;
+                    feedback.classList.add('hidden');
+                }, 4000);
+            }, 1000);
+        }
+
+        // Project Modal Details & Gallery State Data
+        const projectsData = {
+            project1: {
+                title: 'Apocalypse Sales Dashboard',
+                category: 'Data Analysis',
+                images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'],
+                currentIndex: 0,
+                description: 'An interactive Power BI dashboard designed to analyse sales performance and uncover meaningful business insights.',
+                details: [
+                    'Cleaned and transformed raw transactional datasets using Power Query.',
+                    'Handled missing variables, standardized date formats, and resolved data anomalies.',
+                    'Built dynamic data models to track KPIs, monthly sales trends, and regional performance.',
+                    'Designed intuitive chart layouts to present actionable metrics to decision-makers.'
+                ],
+                tools: ['Power BI', 'Power Query', 'Data Cleansing', 'Excel']
+            },
+            project2: {
+                title: 'ICT Maintenance Request System',
+                category: 'Web Development',
+                images: ['https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80'],
+                currentIndex: 0,
+                description: 'A web-based ticketing system designed to streamline ICT support and equipment request workflows.',
+                details: [
+                    'User portal for submitting maintenance tickets and logging equipment issues.',
+                    'Automated ticket number generation and real-time status tracking.',
+                    'Administrative dashboard for assigning tickets, updating repair statuses, and generating logs.',
+                    'Developed using PHP and MySQL backend on XAMPP local server.'
+                ],
+                tools: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'XAMPP']
+            },
+
+                project3: {
+    title: 'Computer Networking & IT Support Practice',
+    category: 'Networking & IT Support',
+    // Add all your real networking images here:
+    images: [
+        'images/networking-1.png',
+        'images/networking-2.png',
+        'images/networking-3.png',
+        'images/networking-4.png'
+    ],
+    currentIndex: 0,
+    description: 'Hands-on practical experience in maintaining computer systems, troubleshooting network connectivity, configuring access points, terminating network cables, installing operating systems, and diagnosing common hardware and software faults.',
+    details: [
+        'Configured routers, switches, and wireless access points for office environments.',
+        'Performed RJ45 Ethernet cable termination and cable testing.',
+        'Troubleshot IP configuration issues, LAN connectivity faults, and DNS errors.',
+        'Installed operating systems, performed system maintenance, and diagnosed hardware faults.'
+    ],
+    tools: ['Network Troubleshooting', 'IP Connectivity', 'Access Points', 'Windows Installation']
+},
+               
+            project4: {
+                title: 'Personal Portfolio Website',
+                category: 'Web Development',
+                images: ['https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80'],
+                currentIndex: 0,
+                description: 'A responsive single-page application built to showcase my technical profile and projects.',
+                details: [
+                    'Clean, minimalist aesthetic using custom dark mode color schemes.',
+                    'Interactive category filters for dynamic project showcasing.',
+                    'Responsive mobile-first layout with smooth navigation and interactive modals.',
+                    'Integrated copy-to-clipboard functionality and simulated contact forms.'
+                ],
+                tools: ['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS']
+            }
+        };
+
+        // Multi-Image Upload Logic (Appends images without replacing)
+        function addMultipleImages(event, projectId) {
+            const files = event.target.files;
+            if (!files || files.length === 0) return;
+
+            const proj = projectsData[projectId];
+            
+            for (let i = 0; i < files.length; i++) {
+                const imageUrl = URL.createObjectURL(files[i]);
+                proj.images.push(imageUrl);
+            }
+
+            // Switch to newly added image
+            proj.currentIndex = proj.images.length - 1;
+            updateGalleryUI(projectId);
+        }
+
+        // Navigate Image Gallery Left / Right
+        function navigateGallery(projectId, direction) {
+            const proj = projectsData[projectId];
+            if (!proj || proj.images.length <= 1) return;
+
+            proj.currentIndex = (proj.currentIndex + direction + proj.images.length) % proj.images.length;
+            updateGalleryUI(projectId);
+        }
+
+        // Select Image from Thumbnails
+        function selectGalleryImage(projectId, index) {
+            const proj = projectsData[projectId];
+            if (!proj || index < 0 || index >= proj.images.length) return;
+
+            proj.currentIndex = index;
+            updateGalleryUI(projectId);
+        }
+
+        // Update Card Image & Thumbnails UI
+        function updateGalleryUI(projectId) {
+            const proj = projectsData[projectId];
+            if (!proj) return;
+
+            // Update main displayed image
+            const mainImg = document.getElementById(`img-${projectId}`);
+            if (mainImg) mainImg.src = proj.images[proj.currentIndex];
+
+            // Update count indicator text
+            const countText = document.getElementById(`count-${projectId}`);
+            if (countText) countText.innerText = `${proj.currentIndex + 1} / ${proj.images.length}`;
+
+            // Re-render thumbnail strip
+            const thumbsContainer = document.getElementById(`thumbs-${projectId}`);
+            if (thumbsContainer) {
+                thumbsContainer.innerHTML = proj.images.map((imgUrl, idx) => `
+                    <img onclick="selectGalleryImage('${projectId}', ${idx})" 
+                         src="${imgUrl}" 
+                         class="w-12 h-10 object-cover rounded border-2 ${idx === proj.currentIndex ? 'border-brand-accent' : 'border-slate-700 opacity-60'} cursor-pointer hover:opacity-100 transition-all">
+                `).join('');
+            }
+        }
+
+        // Modal Controls
+        const modal = document.getElementById('project-modal');
+        const modalContent = document.getElementById('modal-content');
+
+        function openModal(projectId) {
+            const data = projectsData[projectId];
+            if (!data) return;
+
+            modalContent.innerHTML = `
+                <div class="mb-4">
+                    <div class="h-56 sm:h-64 rounded-xl overflow-hidden mb-3 border border-slate-700 relative bg-slate-800 flex items-center justify-center">
+                        <img id="modal-img-${projectId}" src="${data.images[data.currentIndex]}" alt="${data.title}" class="w-full h-full object-cover">
+                        
+                        ${data.images.length > 1 ? `
+                            <button onclick="navigateGallery('${projectId}', -1); updateModalImage('${projectId}');" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/80 hover:bg-brand-accent hover:text-slate-900 text-slate-200 flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="navigateGallery('${projectId}', 1); updateModalImage('${projectId}');" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/80 hover:bg-brand-accent hover:text-slate-900 text-slate-200 flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        ` : ''}
+                    </div>
+
+                    ${data.images.length > 1 ? `
+                        <div id="modal-thumbs-${projectId}" class="flex gap-2 mb-4 overflow-x-auto scrollbar-none pb-1">
+                            ${data.images.map((imgUrl, idx) => `
+                                <img onclick="selectGalleryImage('${projectId}', ${idx}); updateModalImage('${projectId}');" 
+                                     src="${imgUrl}" 
+                                     class="w-14 h-11 object-cover rounded border-2 ${idx === data.currentIndex ? 'border-brand-accent' : 'border-slate-700 opacity-60'} cursor-pointer">
+                            `).join('')}
+                        </div>
+                    ` : ''}
+
+                    <span class="px-2.5 py-1 rounded-md bg-brand-accent/20 text-brand-accent text-xs font-bold uppercase">
+                        ${data.category}
+                    </span>
+                    <h3 class="text-2xl font-bold text-slate-100 mt-2">${data.title}</h3>
+                </div>
+
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">${data.description}</p>
+
+                <div class="mb-6">
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Key Highlights & Accomplishments</h4>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+                        ${data.details.map(detail => `<li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-accent mt-1"></i> <span>${detail}</span></li>`).join('')}
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Tools & Technologies Used</h4>
+                    <div class="flex flex-wrap gap-2">
+                        ${data.tools.map(tool => `<span class="px-2 py-1 rounded bg-slate-800 text-slate-300 text-xs border border-slate-700">${tool}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+        }
+
+        function updateModalImage(projectId) {
+            const data = projectsData[projectId];
+            if (!data) return;
+
+            const modalImg = document.getElementById(`modal-img-${projectId}`);
+            if (modalImg) modalImg.src = data.images[data.currentIndex];
+
+            const modalThumbs = document.getElementById(`modal-thumbs-${projectId}`);
+            if (modalThumbs) {
+                modalThumbs.innerHTML = data.images.map((imgUrl, idx) => `
+                    <img onclick="selectGalleryImage('${projectId}', ${idx}); updateModalImage('${projectId}');" 
+                         src="${imgUrl}" 
+                         class="w-14 h-11 object-cover rounded border-2 ${idx === data.currentIndex ? 'border-brand-accent' : 'border-slate-700 opacity-60'} cursor-pointer">
+                `).join('');
+            }
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Project Filter Buttons Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-accent', 'text-slate-900');
+                    b.classList.add('glass', 'text-slate-300');
+                });
+
+                btn.classList.add('active', 'bg-brand-accent', 'text-slate-900');
+                btn.classList.remove('glass', 'text-slate-300');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
